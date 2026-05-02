@@ -250,40 +250,19 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                  </div>
                  <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1d1d1f]">Global Standards. <br/>Local Engineering.</h2>
                  <p className="text-gray-500 text-lg leading-relaxed">
-                   Our manufacturing facility is ISO 9001:2015 certified. Every machine undergoes a rigorous 48-hour continuous test run before dispatch to ensure it meets international CE safety and GMP hygiene standards.
+                   Our manufacturing facility is ISO 9001:2015 certified. Every machine undergoes a rigorous 48-hour continuous test run before dispatch to ensure consistent build quality and reliable performance.
                  </p>
               </div>
-              
-              {/* Certification Logos/Badges Grid */}
-              <div className="grid grid-cols-2 gap-6 w-full md:w-auto scroll-animate-right">
-                   <div className="anim-zoom flex items-center gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100 shadow-md hover:shadow-lg transition-shadow">
-                      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center font-bold text-blue-900 border border-gray-200 shadow-sm">ISO</div>
-                      <div className="text-sm">
-                         <p className="font-bold text-gray-900">ISO 9001</p>
-                         <p className="text-gray-500 text-xs">Certified</p>
-                      </div>
-                   </div>
-                   <div className="anim-zoom flex items-center gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100 shadow-md hover:shadow-lg transition-shadow">
-                      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center font-bold text-blue-900 border border-gray-200 shadow-sm">CE</div>
-                      <div className="text-sm">
-                         <p className="font-bold text-gray-900">CE Marking</p>
-                         <p className="text-gray-500 text-xs">Compliant</p>
-                      </div>
-                   </div>
-                   <div className="anim-zoom flex items-center gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100 shadow-md hover:shadow-lg transition-shadow">
-                      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center font-bold text-blue-900 border border-gray-200 shadow-sm">GMP</div>
-                      <div className="text-sm">
-                         <p className="font-bold text-gray-900">GMP</p>
-                         <p className="text-gray-500 text-xs">Standard</p>
-                      </div>
-                   </div>
-                   <div className="anim-zoom flex items-center gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100 shadow-md hover:shadow-lg transition-shadow">
-                      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center font-bold text-blue-900 border border-gray-200 shadow-sm">ZED</div>
-                      <div className="text-sm">
-                         <p className="font-bold text-gray-900">ZED</p>
-                         <p className="text-gray-500 text-xs">Bronze</p>
-                      </div>
-                   </div>
+
+              {/* Certification Badge */}
+              <div className="w-full md:w-auto scroll-animate-right">
+                 <div className="anim-zoom flex items-center gap-6 p-6 rounded-2xl bg-gray-50 border border-gray-100 shadow-md hover:shadow-lg transition-shadow">
+                    <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center font-bold text-blue-900 border border-gray-200 shadow-sm text-lg">ISO</div>
+                    <div>
+                       <p className="font-bold text-gray-900 text-lg">ISO 9001:2015</p>
+                       <p className="text-gray-500 text-sm">Quality Management Certified</p>
+                    </div>
+                 </div>
               </div>
            </div>
         </div>

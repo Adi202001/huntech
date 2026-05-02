@@ -166,7 +166,7 @@ export const About: React.FC = () => {
              <div className="anim-flip delay-500 bg-white p-8 rounded-3xl border border-gray-100 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                  <Globe className="w-10 h-10 text-orange-600 mb-6 anim-float-fast" strokeWidth={1.5}/>
                  <h3 className="text-xl font-bold mb-3">Global Standards</h3>
-                 <p className="text-gray-500 leading-relaxed">We adopt European safety and hygiene standards (CE/GMP) while keeping pricing optimized for India.</p>
+                 <p className="text-gray-500 leading-relaxed">We build to ISO 9001:2015 quality standards while keeping pricing optimized for India.</p>
              </div>
          </div>
       </section>
@@ -253,11 +253,11 @@ export const About: React.FC = () => {
             </div>
             <h2 className="text-3xl font-bold mb-4 text-[#1d1d1f]">Certified Excellence</h2>
             <p className="text-gray-500 max-w-2xl mx-auto mb-12">
-              We adhere to the strictest global manufacturing standards to ensure safety, reliability, and quality.
+              Our manufacturing operations are certified to ensure consistent quality, reliability, and process discipline.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70">
-               {['ISO 9001:2015', 'CE Certified', 'GMP Compliant', 'MSME Registered'].map((cert, i) => (
+               {['ISO 9001:2015'].map((cert, i) => (
                    <div key={i} className="flex items-center gap-2 font-bold text-gray-800 text-lg">
                        <CheckCircle2 size={20} className="text-orange-600"/> {cert}
                    </div>
