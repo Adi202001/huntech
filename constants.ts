@@ -35,12 +35,12 @@ export const PRODUCTS: Product[] = [
       'Machine Weight': '~1200 kg',
       'Max Film Width': '450 / 700 mm'
     },
-    imageUrl: '/assests/MULTIHEAD/MULTIHEAD.png',
+    imageUrl: '/assets/MULTIHEAD/MULTIHEAD.png',
     images: [
-      '/assests/MULTIHEAD/MULTIHEAD.png',
-      '/assests/MULTIHEAD/MULTIHEAD2.png',
-      '/assests/MULTIHEAD/MULTIHEAD3.png',
-      '/assests/MULTIHEAD/14 HEAD.png'
+      '/assets/MULTIHEAD/MULTIHEAD.png',
+      '/assets/MULTIHEAD/MULTIHEAD2.png',
+      '/assets/MULTIHEAD/MULTIHEAD3.png',
+      '/assets/MULTIHEAD/14-HEAD.png'
     ],
     suitableFor: ['Snacks', 'Dry Fruits', 'Chips', 'Frozen Food', 'Hardware'],
     priceRange: '₹12 Lakh - ₹25 Lakh'
@@ -58,10 +58,10 @@ export const PRODUCTS: Product[] = [
       'Speed': '40-60 WPM',
       'Suitable For': 'Granules, Seeds, Dry items'
     },
-    imageUrl: '/assests/4 HEAD/4 HEAD.jpeg',
+    imageUrl: '/assets/4-HEAD/4-HEAD.jpeg',
     images: [
-      '/assests/4 HEAD/4 HEAD.jpeg',
-      '/assests/4 HEAD/2 HEAD.jpeg'
+      '/assets/4-HEAD/4-HEAD.jpeg',
+      '/assets/4-HEAD/2-HEAD.jpeg'
     ],
     suitableFor: ['Seeds', 'Granules', 'Small Snacks', 'Dry Fruits'],
     priceRange: '₹3 Lakh - ₹6 Lakh'
@@ -89,12 +89,12 @@ export const PRODUCTS: Product[] = [
       'Machine Weight': '~1200 kg',
       'Max Film Width': '450 / 700 mm'
     },
-    imageUrl: '/assests/AUGOR/AUGOR 10.jpeg',
+    imageUrl: '/assets/AUGOR/AUGOR-10.jpeg',
     images: [
-      '/assests/AUGOR/AUGOR 10.jpeg',
-      '/assests/AUGOR/AUGOR11.jpeg',
-      '/assests/AUGOR/AUGOR12.jpeg',
-      '/assests/AUGOR/COLLOR AUGOR.png'
+      '/assets/AUGOR/AUGOR-10.jpeg',
+      '/assets/AUGOR/AUGOR11.jpeg',
+      '/assets/AUGOR/AUGOR12.jpeg',
+      '/assets/AUGOR/COLLOR-AUGOR.png'
     ],
     suitableFor: ['Spices', 'Atta / Flour', 'Coffee', 'Milk Powder', 'Cosmetic Powders', 'Pharmaceuticals'],
     priceRange: '₹5 Lakh - ₹12 Lakh'
@@ -119,11 +119,11 @@ export const PRODUCTS: Product[] = [
       'Motor': '0.75 kW AC',
       'Power': 'Single or Three Phase'
     },
-    imageUrl: '/assests/MANUAL AUGOR/MANUAL AUGOR.jpeg',
+    imageUrl: '/assets/MANUAL-AUGOR/MANUAL-AUGOR.jpeg',
     images: [
-      '/assests/MANUAL AUGOR/MANUAL AUGOR.jpeg',
-      '/assests/MANUAL AUGOR/MANUAL AUGOR 2.jpeg',
-      '/assests/MANUAL AUGOR/MANUAL AUGOR 3.jpeg'
+      '/assets/MANUAL-AUGOR/MANUAL-AUGOR.jpeg',
+      '/assets/MANUAL-AUGOR/MANUAL-AUGOR-2.jpeg',
+      '/assets/MANUAL-AUGOR/MANUAL-AUGOR-3.jpeg'
     ],
     suitableFor: ['Small Businesses', 'Startups', 'Spices', 'Powders', 'Hing'],
     priceRange: '₹1.5 Lakh - ₹3 Lakh'
@@ -151,12 +151,12 @@ export const PRODUCTS: Product[] = [
       'Machine Weight': '~1200 kg',
       'Conveyor': '8 ft chain with pusher'
     },
-    imageUrl: '/assests/CUP FILLER/CUP FILLER.JPG',
+    imageUrl: '/assets/CUP-FILLER/CUP-FILLER.JPG',
     images: [
-      '/assests/CUP FILLER/CUP FILLER.JPG',
-      '/assests/CUP FILLER/CUPFILLER2.png',
-      '/assests/CUP FILLER/CUP FILLER 3.png',
-      '/assests/CUP FILLER/CUP FILLER 4.JPG'
+      '/assets/CUP-FILLER/CUP-FILLER.JPG',
+      '/assets/CUP-FILLER/CUPFILLER2.png',
+      '/assets/CUP-FILLER/CUP-FILLER-3.png',
+      '/assets/CUP-FILLER/CUP-FILLER-4.JPG'
     ],
     suitableFor: ['Dry Fruits', 'Spices', 'Namkeen', 'Corn Flakes', 'Pulses', 'Rice', 'Frozen Foods'],
     priceRange: '₹2 Lakh - ₹5 Lakh'
@@ -184,12 +184,12 @@ export const PRODUCTS: Product[] = [
       'Power': '3 KW',
       'Machine Weight': '~700 kg'
     },
-    imageUrl: '/assests/PNEUMATIC/SATURN.png',
+    imageUrl: '/assets/PNEUMATIC/SATURN.png',
     images: [
-      '/assests/PNEUMATIC/SATURN.png',
-      '/assests/PNEUMATIC/SATURN2.png',
-      '/assests/PNEUMATIC/SATURN3.JPG',
-      '/assests/PNEUMATIC/PNEUMATIC.jpeg'
+      '/assets/PNEUMATIC/SATURN.png',
+      '/assets/PNEUMATIC/SATURN2.png',
+      '/assets/PNEUMATIC/SATURN3.JPG',
+      '/assets/PNEUMATIC/PNEUMATIC.jpeg'
     ],
     suitableFor: ['Snacks', 'Spices', 'Food Products', 'Small Sachets'],
     priceRange: '₹4 Lakh - ₹8 Lakh'
@@ -207,9 +207,9 @@ export const PRODUCTS: Product[] = [
       'Accuracy': '+/- 0.1%',
       'Bag Types': 'PP, HDPE, Kraft'
     },
-    imageUrl: '/assests/BAGGER/BAGGER.jpeg',
+    imageUrl: '/assets/BAGGER/BAGGER.jpeg',
     images: [
-      '/assests/BAGGER/BAGGER.jpeg'
+      '/assets/BAGGER/BAGGER.jpeg'
     ],
     suitableFor: ['Cement', 'Fertilizers', 'Grains', 'Animal Feed'],
     priceRange: '₹8 Lakh - ₹15 Lakh'
@@ -237,9 +237,9 @@ export const PRODUCTS: Product[] = [
       'Power': '2 KW',
       'Machine Weight': '~500 kg'
     },
-    imageUrl: '/assests/FFS/Gemini_Generated_Image_gtsxh7gtsxh7gtsx.png',
+    imageUrl: '/assets/FFS/Gemini_Generated_Image_gtsxh7gtsxh7gtsx.png',
     images: [
-      '/assests/FFS/Gemini_Generated_Image_gtsxh7gtsxh7gtsx.png'
+      '/assets/FFS/Gemini_Generated_Image_gtsxh7gtsxh7gtsx.png'
     ],
     suitableFor: ['Whole Spices', 'Tea', 'Sugar', 'Detergent', 'Cereals', 'Grains'],
     priceRange: '₹6 Lakh - ₹15 Lakh'
@@ -266,9 +266,9 @@ export const PRODUCTS: Product[] = [
       'Power': '3 KW',
       'Machine Weight': '~700 kg'
     },
-    imageUrl: 'https://huntechengineers.com/wp-content/uploads/2022/04/high-speed-machine-bn-4.jpg',
+    imageUrl: '/assets/machines/ffs-high-speed.jpg',
     images: [
-      'https://huntechengineers.com/wp-content/uploads/2022/04/high-speed-machine-bn-4.jpg'
+      '/assets/machines/ffs-high-speed.jpg'
     ],
     suitableFor: ['Snacks', 'Spices', 'Sachets', 'Food Products'],
     priceRange: '₹8 Lakh - ₹18 Lakh'
@@ -295,9 +295,9 @@ export const PRODUCTS: Product[] = [
       'Power': '2 KW',
       'Machine Weight': '~700 kg'
     },
-    imageUrl: 'https://huntechengineers.com/wp-content/uploads/2022/04/FFS-Liquid-Packaging.jpg',
+    imageUrl: '/assets/machines/ffs-liquid.jpg',
     images: [
-      'https://huntechengineers.com/wp-content/uploads/2022/04/FFS-Liquid-Packaging.jpg'
+      '/assets/machines/ffs-liquid.jpg'
     ],
     suitableFor: ['Water', 'Juice', 'Ketchup', 'Hair Oil', 'Shampoo', 'Liquid Medicines'],
     priceRange: '₹5 Lakh - ₹10 Lakh'
@@ -325,9 +325,9 @@ export const PRODUCTS: Product[] = [
       'Air': '10 CFM @ 6 BAR',
       'Machine Weight': '~1200 kg'
     },
-    imageUrl: 'https://huntechengineers.com/wp-content/uploads/2022/04/Horizontal-Flow-Wrape-Of-Packaging-1.jpg',
+    imageUrl: '/assets/machines/horizontal-flow.jpg',
     images: [
-      'https://huntechengineers.com/wp-content/uploads/2022/04/Horizontal-Flow-Wrape-Of-Packaging-1.jpg'
+      '/assets/machines/horizontal-flow.jpg'
     ],
     suitableFor: ['Cakes', 'Chocolates', 'Noodles', 'Cookies', 'Biscuits', 'Soap Bars'],
     priceRange: '₹7 Lakh - ₹14 Lakh'
@@ -355,9 +355,9 @@ export const PRODUCTS: Product[] = [
       'Weight (HUN 812.1)': '1500 kg',
       'Air': '2 CFM @ 6 kg/cm²'
     },
-    imageUrl: 'https://huntechengineers.com/wp-content/uploads/2022/04/Multi-Track-Liquid-Packaging-1.jpg',
+    imageUrl: '/assets/machines/multi-track.jpg',
     images: [
-      'https://huntechengineers.com/wp-content/uploads/2022/04/Multi-Track-Liquid-Packaging-1.jpg'
+      '/assets/machines/multi-track.jpg'
     ],
     suitableFor: ['Tea', 'Coffee', 'Ketchup', 'Hair Oil', 'Shampoo', 'Mouth Freshener', 'Powders'],
     priceRange: '₹10 Lakh - ₹20 Lakh'
@@ -384,9 +384,9 @@ export const PRODUCTS: Product[] = [
       'Air': '6.0 kg/sq.cm',
       'Dimensions': '900 × 610 × 1500 mm'
     },
-    imageUrl: 'https://huntechengineers.com/wp-content/uploads/2022/04/Tea-Bag-Packaging.jpg',
+    imageUrl: '/assets/machines/tea-bag.jpg',
     images: [
-      'https://huntechengineers.com/wp-content/uploads/2022/04/Tea-Bag-Packaging.jpg'
+      '/assets/machines/tea-bag.jpg'
     ],
     suitableFor: ['Tea', 'Coffee', 'Herbal Powders', 'Medicines', 'Nutraceuticals'],
     priceRange: '₹6 Lakh - ₹12 Lakh'
@@ -414,9 +414,9 @@ export const PRODUCTS: Product[] = [
       'Air': '10 CFM @ 6 BAR',
       'Machine Weight': '~1200 kg'
     },
-    imageUrl: 'https://huntechengineers.com/wp-content/uploads/2022/04/Bend-Sealer-Of-Packaging-2.jpg',
+    imageUrl: '/assets/machines/bend-sealer.jpg',
     images: [
-      'https://huntechengineers.com/wp-content/uploads/2022/04/Bend-Sealer-Of-Packaging-2.jpg'
+      '/assets/machines/bend-sealer.jpg'
     ],
     suitableFor: ['Cartons', 'Boxes', 'Secondary Packaging', 'FMCG Products'],
     priceRange: '₹3 Lakh - ₹8 Lakh'
@@ -443,9 +443,9 @@ export const PRODUCTS: Product[] = [
       'Machine Weight': '~1200 kg',
       'Conveyor': '8 ft chain with pusher'
     },
-    imageUrl: 'https://huntechengineers.com/wp-content/uploads/2022/04/Mini-Coller-Type-Auger-Filler-Packaging.jpg',
+    imageUrl: '/assets/machines/mini-auger.jpg',
     images: [
-      'https://huntechengineers.com/wp-content/uploads/2022/04/Mini-Coller-Type-Auger-Filler-Packaging.jpg'
+      '/assets/machines/mini-auger.jpg'
     ],
     suitableFor: ['Tea', 'Detergent', 'Snacks', 'Rice', 'Pulses', 'Juice', 'Shampoo'],
     priceRange: '₹3 Lakh - ₹7 Lakh'
@@ -472,9 +472,9 @@ export const PRODUCTS: Product[] = [
       'Power': '3 KW',
       'Machine Weight': '~1200 kg'
     },
-    imageUrl: 'https://huntechengineers.com/wp-content/uploads/2022/04/Mini-Coller-Type-Cup-Filler-Packaging.jpg',
+    imageUrl: '/assets/machines/mini-cup.jpg',
     images: [
-      'https://huntechengineers.com/wp-content/uploads/2022/04/Mini-Coller-Type-Cup-Filler-Packaging.jpg'
+      '/assets/machines/mini-cup.jpg'
     ],
     suitableFor: ['Rice', 'Kurkure', 'Soya Chunks', 'Tea', 'Pulses', 'Sugar', 'Namkeen', 'Spices'],
     priceRange: '₹3 Lakh - ₹7 Lakh'
@@ -506,9 +506,9 @@ export const PRODUCTS: Product[] = [
       'Machine Weight': '525 kg',
       'Packing Material': 'Non-woven fabrics'
     },
-    imageUrl: 'https://huntechengineers.com/wp-content/uploads/2022/04/khaini-machine-bn.jpg',
+    imageUrl: '/assets/machines/filter-khaini.jpg',
     images: [
-      'https://huntechengineers.com/wp-content/uploads/2022/04/khaini-machine-bn.jpg'
+      '/assets/machines/filter-khaini.jpg'
     ],
     suitableFor: ['Khaini', 'Tobacco', 'Granules', 'Small Sachets'],
     priceRange: '₹8 Lakh - ₹15 Lakh'

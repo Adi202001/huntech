@@ -50,7 +50,7 @@ export const NavBar: React.FC<NavBarProps> = ({ currentView, onChangeView }) => 
             onClick={() => handleNav(ViewState.HOME)}
           >
             <img
-              src="/assests/logo/logo.png"
+              src="/assets/logo/logo.png"
               alt="HE"
               className="h-9 w-auto object-contain"
             />

@@ -24,3 +24,11 @@ dist-ssr
 *.sw?
 
 .vercel
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Local large files
+*.zip

@@ -16,7 +16,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <img
-                src="/assests/logo/logo.png"
+                src="/assets/logo/logo.png"
                 alt="HE"
                 className="h-9 w-auto object-contain"
               />

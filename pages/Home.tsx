@@ -130,7 +130,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               {Array.from({ length: 15 }, (_, i) => (
                 <div key={i} className="flex-shrink-0 h-24 w-44 flex items-center justify-center">
                   <img
-                    src={`/assests/clients/logo-${i + 1}.jpg`}
+                    src={`/assets/clients/logo-${i + 1}.jpg`}
                     alt={`Client ${i + 1}`}
                     className="max-h-20 max-w-[160px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   />
@@ -197,7 +197,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               <div className="grid lg:grid-cols-2 gap-16 items-center">
                   <div className="order-2 lg:order-1 scroll-animate-left">
                       <div className="relative aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl">
-                          <img src="/assests/AUGOR/AUGOR 10.jpeg" alt="Engineering" className="w-full h-full object-cover" />
+                          <img src="/assets/AUGOR/AUGOR-10.jpeg" alt="Engineering" className="w-full h-full object-cover" />
                           <div className="absolute inset-0 bg-black/10"></div>
                       </div>
                   </div>
