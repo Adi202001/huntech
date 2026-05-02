@@ -46,22 +46,22 @@ const services = [
   },
 ];
 
-const UNSPLASH = (id: string) =>
-  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=600&q=80`;
+const PEXELS = (id: number) =>
+  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=600`;
 
 const components = [
-  { name: 'Heating elements & sealing jaws', image: UNSPLASH('1601134467661-3d775b999c8b') },
-  { name: 'Cutters & knives',                image: UNSPLASH('1565689157206-0fddef7589a2') },
-  { name: 'Gear motors (Crompton / Bonfiglioli)', image: UNSPLASH('1504328345606-18bbc8c9d7d1') },
-  { name: 'AC drives & PLCs (L&T / DELTA)',  image: UNSPLASH('1518770660439-4636190af475') },
-  { name: 'Pneumatic cylinders (Festo / SMC / Camozzi)', image: UNSPLASH('1581091226825-a6a2a5aee158') },
-  { name: 'Photo sensors & encoders',        image: UNSPLASH('1504917595217-d4dc5ebe6122') },
-  { name: 'Conveyor belts & chains',         image: UNSPLASH('1563770660941-20978e870e26') },
-  { name: 'SS food-grade contact parts',     image: UNSPLASH('1530124566582-a618bc2615dc') },
-  { name: 'Auger screws & funnels',          image: UNSPLASH('1533417479674-4f1c8a4c18f2') },
-  { name: 'Cup-filler cups & dosing wheels', image: UNSPLASH('1563986768609-322da13575f3') },
-  { name: 'Film draw rollers & clutches',    image: UNSPLASH('1504328345606-18bbc8c9d7d1') },
-  { name: 'Solenoid valves & regulators',    image: UNSPLASH('1581091226825-a6a2a5aee158') },
+  { name: 'Heating elements & sealing jaws',             image: PEXELS(6152271) },
+  { name: 'Cutters & knives',                            image: PEXELS(7492585) },
+  { name: 'Gear motors (Crompton / Bonfiglioli)',        image: PEXELS(19658259) },
+  { name: 'AC drives & PLCs (L&T / DELTA)',              image: PEXELS(18471536) },
+  { name: 'Pneumatic cylinders (Festo / SMC / Camozzi)', image: PEXELS(31985602) },
+  { name: 'Photo sensors & encoders',                    image: PEXELS(35686432) },
+  { name: 'Conveyor belts & chains',                     image: PEXELS(17320030) },
+  { name: 'SS food-grade contact parts',                 image: PEXELS(7598915) },
+  { name: 'Auger screws & funnels',                      image: PEXELS(6791492) },
+  { name: 'Cup-filler cups & dosing wheels',             image: PEXELS(5532675) },
+  { name: 'Film draw rollers & clutches',                image: PEXELS(37308227) },
+  { name: 'Solenoid valves & regulators',                image: PEXELS(12527113) },
 ];
 
 export const Spares: React.FC = () => {
