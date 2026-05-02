@@ -46,19 +46,22 @@ const services = [
   },
 ];
 
+const UNSPLASH = (id: string) =>
+  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=600&q=80`;
+
 const components = [
-  'Heating elements & sealing jaws',
-  'Cutters & knives',
-  'Gear motors (Crompton / Bonfiglioli)',
-  'AC drives & PLCs (L&T / DELTA)',
-  'Pneumatic cylinders (Festo / SMC / Camozzi)',
-  'Photo sensors & encoders',
-  'Conveyor belts & chains',
-  'SS food-grade contact parts',
-  'Auger screws & funnels',
-  'Cup-filler cups & dosing wheels',
-  'Film draw rollers & clutches',
-  'Solenoid valves & regulators',
+  { name: 'Heating elements & sealing jaws', image: UNSPLASH('1601134467661-3d775b999c8b') },
+  { name: 'Cutters & knives',                image: UNSPLASH('1565689157206-0fddef7589a2') },
+  { name: 'Gear motors (Crompton / Bonfiglioli)', image: UNSPLASH('1504328345606-18bbc8c9d7d1') },
+  { name: 'AC drives & PLCs (L&T / DELTA)',  image: UNSPLASH('1518770660439-4636190af475') },
+  { name: 'Pneumatic cylinders (Festo / SMC / Camozzi)', image: UNSPLASH('1581091226825-a6a2a5aee158') },
+  { name: 'Photo sensors & encoders',        image: UNSPLASH('1504917595217-d4dc5ebe6122') },
+  { name: 'Conveyor belts & chains',         image: UNSPLASH('1563770660941-20978e870e26') },
+  { name: 'SS food-grade contact parts',     image: UNSPLASH('1530124566582-a618bc2615dc') },
+  { name: 'Auger screws & funnels',          image: UNSPLASH('1533417479674-4f1c8a4c18f2') },
+  { name: 'Cup-filler cups & dosing wheels', image: UNSPLASH('1563986768609-322da13575f3') },
+  { name: 'Film draw rollers & clutches',    image: UNSPLASH('1504328345606-18bbc8c9d7d1') },
+  { name: 'Solenoid valves & regulators',    image: UNSPLASH('1581091226825-a6a2a5aee158') },
 ];
 
 export const Spares: React.FC = () => {
@@ -153,11 +156,28 @@ export const Spares: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {components.map((c, i) => (
-              <div key={i} className="flex items-start gap-3">
-                <div className="mt-1 w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0" />
-                <p className="text-gray-700 text-sm">{c}</p>
+              <div
+                key={i}
+                className="group relative bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="aspect-square overflow-hidden bg-gray-100">
+                  <img
+                    src={c.image}
+                    alt={c.name}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
+                  />
+                </div>
+                <div className="p-4">
+                  <p className="text-xs text-gray-700 font-medium leading-snug">
+                    {c.name}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
