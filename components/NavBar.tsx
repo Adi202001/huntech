@@ -74,17 +74,19 @@ export const NavBar: React.FC<NavBarProps> = ({ currentView, onChangeView }) => 
 
           {/* CTA */}
           <div className="hidden md:block">
-            <button 
+            <button
               onClick={() => handleNav(ViewState.CONTACT)}
-              className="anim-glow bg-black text-white text-xs font-medium px-4 py-2 rounded-full hover:bg-gray-800 transition-colors"
+              className="bg-black text-white text-xs font-medium px-4 py-2 rounded-full hover:bg-gray-800 transition-colors"
             >
               Get a Quote
             </button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden p-2 text-gray-800 focus:outline-none"
+          <button
+            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMobileMenuOpen}
+            className="md:hidden p-2 text-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-full"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X /> : <Menu />}

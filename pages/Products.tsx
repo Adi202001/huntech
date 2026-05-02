@@ -158,12 +158,12 @@ export const Products: React.FC<ProductsProps> = ({ onNavigate }) => {
             {/* Content Column */}
             <div className="order-1 lg:order-2">
               <h2 className="text-5xl md:text-6xl font-bold mb-8 leading-[1.1] tracking-tight">
-                Smart Technology for <br />
-                <span className="text-blue-500">Smarter Packaging.</span>
+                Industrial-grade components. <br />
+                <span className="text-blue-500">Built to run for years.</span>
               </h2>
               <p className="text-gray-400 text-lg md:text-xl mb-12 leading-relaxed font-light">
-                Huntech integrates advanced IoT capabilities into our packaging lines. 
-                Monitor efficiency, predict maintenance, and optimize throughput remotely.
+                Every Huntech machine is built around the same proven control stack and food-grade contact parts —
+                so spares are predictable and downtime stays low.
               </p>
 
               <div className="space-y-10 mb-12">
@@ -173,9 +173,9 @@ export const Products: React.FC<ProductsProps> = ({ onNavigate }) => {
                     <Zap className="text-blue-500" size={28} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold mb-2 text-white">High Throughput</h4>
+                    <h4 className="text-xl font-bold mb-2 text-white">PLC + AC Drive Control</h4>
                     <p className="text-gray-400 text-base leading-relaxed max-w-md">
-                      Maximize output without compromising on seal integrity. Our algorithms adjust heat and pressure in real-time.
+                      L&amp;T or DELTA AC drives with PLC and Micro view controls. Speed, sealing temperature and dwell are all operator-tunable on the panel.
                     </p>
                   </div>
                 </div>
@@ -186,19 +186,19 @@ export const Products: React.FC<ProductsProps> = ({ onNavigate }) => {
                     <Cpu className="text-blue-500" size={28} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold mb-2 text-white">Modular Design</h4>
+                    <h4 className="text-xl font-bold mb-2 text-white">Modular, Customizable Build</h4>
                     <p className="text-gray-400 text-base leading-relaxed max-w-md">
-                      Easily swap components for different pouch styles. The system auto-calibrates for new configurations.
+                      Filler, sealing jaw and conveyor are configured to your product, pouch size and film width. Easy to retrofit as your line evolves.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <button 
+              <button
                 onClick={() => onNavigate(ViewState.ABOUT, '')}
                 className="group inline-flex items-center text-white font-semibold text-lg hover:text-blue-400 transition-colors"
               >
-                Explore Our Technology 
+                Read our story
                 <ArrowRight className="ml-3 group-hover:translate-x-2 transition-transform" size={20} />
               </button>
             </div>

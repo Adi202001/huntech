@@ -99,7 +99,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         <div className="max-w-5xl z-10 relative">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 backdrop-blur-sm border border-gray-200 shadow-lg mb-8 animate-in slide-in-from-bottom-4 duration-1000">
              <Star size={12} className="text-orange-500 fill-orange-500" />
-             <span className="text-xs font-semibold text-gray-600 tracking-wide uppercase">Trusted by Manufacturers across</span>
+             <span className="text-xs font-semibold text-gray-600 tracking-wide uppercase">Trusted by Manufacturers across India</span>
           </div>
           <h1 className="anim-blur-in text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-[#1d1d1f] mb-8 drop-shadow-sm leading-[0.9]">
             Packaging. <br />
@@ -119,25 +119,24 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       {/* Trusted By / Clients Strip */}
       <section className="py-10 border-y border-gray-200 bg-white overflow-hidden scroll-animate">
         <p className="text-center text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-8">Trusted by Manufacturers Across India</p>
-        <div className="relative flex">
-          {/* Marquee track — duplicated for seamless loop */}
-          {[0, 1].map((pass) => (
-            <div
-              key={pass}
-              className="flex shrink-0 items-center gap-12 pr-12 animate-marquee"
-              aria-hidden={pass === 1}
-            >
-              {Array.from({ length: 15 }, (_, i) => (
-                <div key={i} className="flex-shrink-0 h-24 w-44 flex items-center justify-center">
-                  <img
-                    src={`/assets/clients/logo-${i + 1}.jpg`}
-                    alt={`Client ${i + 1}`}
-                    className="max-h-20 max-w-[160px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                  />
-                </div>
-              ))}
-            </div>
-          ))}
+        <div className="relative flex overflow-hidden">
+          {/* One animated track holding two identical halves so translateX(-50%) loops seamlessly */}
+          <div className="flex shrink-0 items-center animate-marquee">
+            {[0, 1].map((pass) => (
+              <div key={pass} className="flex shrink-0 items-center gap-12 pr-12" aria-hidden={pass === 1}>
+                {Array.from({ length: 15 }, (_, i) => (
+                  <div key={i} className="flex-shrink-0 h-24 w-44 flex items-center justify-center">
+                    <img
+                      src={`/assets/clients/logo-${i + 1}.jpg`}
+                      alt={`Client ${i + 1}`}
+                      loading="lazy"
+                      className="max-h-20 max-w-[160px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                    />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -149,13 +148,15 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 <p className="text-xl text-gray-500 font-light">Precision machinery for every packaging need.</p>
             </div>
             <div className="hidden md:flex gap-3">
-                <button 
+                <button
+                  aria-label="Scroll machines left"
                   onClick={() => scroll('left')}
                   className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-colors"
                 >
                     <ChevronLeft size={20} />
                 </button>
-                <button 
+                <button
+                  aria-label="Scroll machines right"
                   onClick={() => scroll('right')}
                   className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-colors"
                 >
@@ -172,10 +173,9 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         >
             {PRODUCTS.map((product) => (
                 <div key={product.id} className="snap-center shrink-0 w-[85vw] md:w-[400px]">
-                    <ProductCard 
-                        product={product} 
+                    <ProductCard
+                        product={product}
                         onClick={(id) => onNavigate(ViewState.PRODUCT_DETAIL, id)}
-                        featured={false} 
                     />
                 </div>
             ))}
@@ -226,9 +226,9 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
             {[
-                { icon: Zap, title: "High Speed", desc: "Up to 120 pouches per minute with consistent sealing quality." },
-                { icon: ShieldCheck, title: "Zero Breakdown", desc: "Robust mechanical design ensures 24/7 operation with minimal downtime." },
-                { icon: Users, title: "Local Support", desc: "24-hour response time from our Faridabad based service team." }
+                { icon: Zap, title: "High Speed", desc: "Up to 450 pouches per minute on our flagship FFS line, with consistent sealing quality." },
+                { icon: ShieldCheck, title: "Built to Last", desc: "Heavy-gauge steel frames and SS contact parts engineered for years of continuous operation." },
+                { icon: Users, title: "Local Support", desc: "Under 24-hour response time from our Faridabad-based service team." }
             ].map((item, i) => (
                 <div key={i} className={`anim-flip delay-${i === 0 ? '100' : i === 1 ? '300' : '500'} p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 shadow-lg shadow-black/20 hover:shadow-2xl hover:shadow-black/30 transition-all duration-300`}>
                     <item.icon className="w-10 h-10 text-orange-500 mb-6 anim-float-slow" />

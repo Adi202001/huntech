@@ -26,8 +26,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               {COMPANY_INFO.tagline}
             </p>
             <div className="flex gap-4">
-               <a href="https://www.facebook.com/share/1BMxKuzwLR/" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-orange-500 transition-colors"><Facebook size={20}/></a>
-               <a href="https://www.linkedin.com/in/nirbhay-gupta-1064551b1?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-orange-500 transition-colors"><Linkedin size={20}/></a>
+               <a aria-label="Huntech on Facebook" href="https://www.facebook.com/share/1BMxKuzwLR/" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-orange-500 transition-colors"><Facebook size={20}/></a>
+               <a aria-label="Huntech on LinkedIn" href="https://www.linkedin.com/in/nirbhay-gupta-1064551b1?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-orange-500 transition-colors"><Linkedin size={20}/></a>
             </div>
           </div>
 
@@ -47,7 +47,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <li><button onClick={() => onNavigate(ViewState.ABOUT)} className="hover:text-orange-500 transition-colors">About Us</button></li>
               <li><button onClick={() => onNavigate(ViewState.SPARES)} className="hover:text-orange-500 transition-colors">Services & Spares</button></li>
               <li><button onClick={() => onNavigate(ViewState.CONTACT)} className="hover:text-orange-500 transition-colors">Contact</button></li>
-              <li><button className="hover:text-orange-500 transition-colors">Privacy Policy</button></li>
             </ul>
           </div>
 

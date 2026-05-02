@@ -33,6 +33,22 @@ const App: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [currentView, selectedProductId]);
 
+  // Update browser tab title per view
+  useEffect(() => {
+    const base = 'Huntech Engineers';
+    let title = base;
+    if (currentView === ViewState.PRODUCTS) title = `Machines · ${base}`;
+    else if (currentView === ViewState.PRODUCT_DETAIL) {
+      const product = PRODUCTS.find((p) => p.id === selectedProductId);
+      title = product ? `${product.name} · ${base}` : `Machine · ${base}`;
+    }
+    else if (currentView === ViewState.ABOUT) title = `About · ${base}`;
+    else if (currentView === ViewState.CONTACT) title = `Contact · ${base}`;
+    else if (currentView === ViewState.SPARES) title = `Services & Spares · ${base}`;
+    else title = `${base} — Precision Packaging Machinery`;
+    document.title = title;
+  }, [currentView, selectedProductId]);
+
   // Global scroll animation observer — re-runs on every view change
   useEffect(() => {
     const observer = new IntersectionObserver(

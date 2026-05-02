@@ -1,9 +1,38 @@
-import React from 'react';
-import { Mail, MapPin, Phone, MessageSquare, ClipboardCheck, Wrench, Truck } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, MapPin, Phone, MessageSquare, ClipboardCheck, Wrench, Truck, CheckCircle } from 'lucide-react';
 import { COMPANY_INFO } from '../constants';
 import { Button } from '../components/Button';
 
 export const Contact: React.FC = () => {
+  const [form, setForm] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    product: '',
+    company: '',
+    message: '',
+  });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (key: keyof typeof form) =>
+    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
+      setForm((f) => ({ ...f, [key]: e.target.value }));
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.name || !form.phone || !form.email) return;
+    const subject = `Quote request: ${form.product || 'General enquiry'}`;
+    const body =
+      `Name: ${form.name}\n` +
+      `Phone: ${form.phone}\n` +
+      `Email: ${form.email}\n` +
+      `Company: ${form.company || '-'}\n` +
+      `Product Interest: ${form.product || '-'}\n\n` +
+      `Message:\n${form.message || '-'}\n`;
+    window.location.href = `mailto:${COMPANY_INFO.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setSubmitted(true);
+  };
+
   return (
     <div className="pt-8 pb-20 bg-[#f5f5f7] min-h-screen">
        <div className="max-w-7xl mx-auto px-6">
@@ -27,10 +56,16 @@ export const Contact: React.FC = () => {
                       </div>
                       <h3 className="text-lg font-bold mb-2 text-[#1d1d1f]">Factory Visit</h3>
                       <p className="text-gray-500 leading-relaxed text-sm mb-4">
-                        {COMPANY_INFO.address}<br/>
-                        <span className="text-gray-400">Opposite Railway Line</span>
+                        {COMPANY_INFO.address}
                       </p>
-                      <a href="#" className="text-sm font-bold text-orange-600 hover:underline">Get Directions &rarr;</a>
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(COMPANY_INFO.address)}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-sm font-bold text-orange-600 hover:underline"
+                      >
+                        Get Directions &rarr;
+                      </a>
                   </div>
 
                   {/* Sales Card */}
@@ -66,49 +101,81 @@ export const Contact: React.FC = () => {
                           <p className="text-gray-500">Fill out the form below and our engineering team will get back to you within 24 hours.</p>
                       </div>
                       
-                      <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                      {submitted ? (
+                          <div className="text-center py-8">
+                              <div className="w-16 h-16 rounded-full bg-green-50 text-green-600 flex items-center justify-center mx-auto mb-6">
+                                  <CheckCircle size={32} />
+                              </div>
+                              <h4 className="text-xl font-bold text-[#1d1d1f] mb-2">Email opened.</h4>
+                              <p className="text-gray-500 max-w-md mx-auto mb-6">
+                                  Your email client should now have a draft pre-filled with your details. Send it and our team will reply within 24 hours. If nothing opened, email us directly at <a className="text-orange-600 font-semibold" href={`mailto:${COMPANY_INFO.email}`}>{COMPANY_INFO.email}</a>.
+                              </p>
+                              <button
+                                  onClick={() => setSubmitted(false)}
+                                  className="text-sm font-semibold text-gray-500 hover:text-black"
+                              >
+                                  Send another message
+                              </button>
+                          </div>
+                      ) : (
+                      <form className="space-y-6" onSubmit={handleSubmit}>
                           <div className="grid md:grid-cols-2 gap-6">
                               <div className="space-y-2">
-                                  <label className="text-xs font-bold text-gray-500 ml-1 uppercase tracking-wider">Full Name</label>
-                                  <input type="text" className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-4 text-gray-900 focus:ring-2 focus:ring-orange-500 focus:bg-white outline-none transition-all" placeholder="John Doe"/>
+                                  <label htmlFor="contact-name" className="text-xs font-bold text-gray-500 ml-1 uppercase tracking-wider">Full Name</label>
+                                  <input id="contact-name" type="text" required value={form.name} onChange={handleChange('name')} className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-4 text-gray-900 focus:ring-2 focus:ring-orange-500 focus:bg-white outline-none transition-all" placeholder="John Doe"/>
                               </div>
                               <div className="space-y-2">
-                                  <label className="text-xs font-bold text-gray-500 ml-1 uppercase tracking-wider">Phone Number</label>
-                                  <input type="tel" className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-4 text-gray-900 focus:ring-2 focus:ring-orange-500 focus:bg-white outline-none transition-all" placeholder="+91 98765 43210"/>
+                                  <label htmlFor="contact-phone" className="text-xs font-bold text-gray-500 ml-1 uppercase tracking-wider">Phone Number</label>
+                                  <input id="contact-phone" type="tel" required value={form.phone} onChange={handleChange('phone')} className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-4 text-gray-900 focus:ring-2 focus:ring-orange-500 focus:bg-white outline-none transition-all" placeholder="+91 98765 43210"/>
                               </div>
                           </div>
-                          
+
                           <div className="space-y-2">
-                              <label className="text-xs font-bold text-gray-500 ml-1 uppercase tracking-wider">Email Address</label>
-                              <input type="email" className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-4 text-gray-900 focus:ring-2 focus:ring-orange-500 focus:bg-white outline-none transition-all" placeholder="john@company.com"/>
+                              <label htmlFor="contact-email" className="text-xs font-bold text-gray-500 ml-1 uppercase tracking-wider">Email Address</label>
+                              <input id="contact-email" type="email" required value={form.email} onChange={handleChange('email')} className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-4 text-gray-900 focus:ring-2 focus:ring-orange-500 focus:bg-white outline-none transition-all" placeholder="john@company.com"/>
                           </div>
 
                           <div className="grid md:grid-cols-2 gap-6">
                               <div className="space-y-2">
-                                  <label className="text-xs font-bold text-gray-500 ml-1 uppercase tracking-wider">Product Interest</label>
-                                  <select className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-4 text-gray-900 focus:ring-2 focus:ring-orange-500 focus:bg-white outline-none transition-all appearance-none">
-                                      <option>Select a machine...</option>
-                                      <option>VFFS Pouch Packing</option>
+                                  <label htmlFor="contact-product" className="text-xs font-bold text-gray-500 ml-1 uppercase tracking-wider">Product Interest</label>
+                                  <select id="contact-product" value={form.product} onChange={handleChange('product')} className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-4 text-gray-900 focus:ring-2 focus:ring-orange-500 focus:bg-white outline-none transition-all appearance-none">
+                                      <option value="">Select a machine...</option>
                                       <option>Multi-Head Weigher</option>
-                                      <option>Auger Filler</option>
-                                      <option>Liquid Packing</option>
-                                      <option>Flow Wrap Machine</option>
+                                      <option>4 Head Linear Weigher</option>
+                                      <option>Auger Filler System</option>
+                                      <option>Manual Auger Filler</option>
+                                      <option>Cup Filler Machine</option>
+                                      <option>Pneumatic Filler (Saturn)</option>
+                                      <option>Bagger Machine</option>
+                                      <option>Form Fill Seal (FFS)</option>
+                                      <option>FFS High Speed Machine</option>
+                                      <option>FFS Liquid Packaging</option>
+                                      <option>Horizontal Flow Wrapper</option>
+                                      <option>Multi Track Liquid Machine</option>
+                                      <option>Tea Bag Packaging Machine</option>
+                                      <option>Bend Sealer Machine</option>
+                                      <option>Mini Collar Auger Filler</option>
+                                      <option>Mini Collar Cup Filler</option>
+                                      <option>Filter Khaini Machine</option>
                                       <option>Other / Custom</option>
                                   </select>
                               </div>
                               <div className="space-y-2">
-                                  <label className="text-xs font-bold text-gray-500 ml-1 uppercase tracking-wider">Company Name</label>
-                                  <input type="text" className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-4 text-gray-900 focus:ring-2 focus:ring-orange-500 focus:bg-white outline-none transition-all" placeholder="Your Company Ltd."/>
+                                  <label htmlFor="contact-company" className="text-xs font-bold text-gray-500 ml-1 uppercase tracking-wider">Company Name</label>
+                                  <input id="contact-company" type="text" value={form.company} onChange={handleChange('company')} className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-4 text-gray-900 focus:ring-2 focus:ring-orange-500 focus:bg-white outline-none transition-all" placeholder="Your Company Ltd."/>
                               </div>
                           </div>
 
                           <div className="space-y-2">
-                              <label className="text-xs font-bold text-gray-500 ml-1 uppercase tracking-wider">Message</label>
-                              <textarea rows={5} className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-4 text-gray-900 focus:ring-2 focus:ring-orange-500 focus:bg-white outline-none resize-none transition-all" placeholder="Tell us about your product (e.g., chips, 50g pouch) and required speed..."></textarea>
+                              <label htmlFor="contact-message" className="text-xs font-bold text-gray-500 ml-1 uppercase tracking-wider">Message</label>
+                              <textarea id="contact-message" rows={5} value={form.message} onChange={handleChange('message')} className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-4 text-gray-900 focus:ring-2 focus:ring-orange-500 focus:bg-white outline-none resize-none transition-all" placeholder="Tell us about your product (e.g., chips, 50g pouch) and required speed..."></textarea>
                           </div>
 
-                          <Button className="w-full justify-center !py-4 text-lg shadow-lg shadow-blue-900/10">Send Inquiry</Button>
+                          <button type="submit" className="w-full justify-center bg-[#1d1d1f] text-white hover:bg-gray-800 transition-colors rounded-full text-lg font-medium py-4 shadow-lg shadow-blue-900/10">
+                              Send Inquiry
+                          </button>
                       </form>
+                      )}
                   </div>
               </div>
           </div>
