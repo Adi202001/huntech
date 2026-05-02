@@ -138,7 +138,7 @@ export const Products: React.FC<ProductsProps> = ({ onNavigate }) => {
               <div className="relative rounded-[2rem] overflow-hidden aspect-square shadow-2xl border border-white/10 group bg-gray-900">
                 <img 
                   src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=1200" 
-                  alt="Swiss Engineering Gears" 
+                  alt="Precision packaging machinery components"
                   className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 scale-105 group-hover:scale-110"
                 />
                 
@@ -150,7 +150,7 @@ export const Products: React.FC<ProductsProps> = ({ onNavigate }) => {
                   <div className="bg-blue-600 rounded-full p-1">
                     <CheckCircle size={14} className="text-white" strokeWidth={3} />
                   </div>
-                  <span className="text-xs font-bold tracking-[0.2em] uppercase text-white">Swiss Engineering</span>
+                  <span className="text-xs font-bold tracking-[0.2em] uppercase text-white">Made in Faridabad</span>
                 </div>
               </div>
             </div>

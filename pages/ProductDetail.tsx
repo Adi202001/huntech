@@ -127,8 +127,8 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack, o
                     <ShieldCheck className="text-green-600" size={18} />
                 </div>
                 <div>
-                   <h4 className="font-bold text-sm text-gray-900 mb-1">Swiss-Engineered Reliability</h4>
-                   <p className="text-xs text-gray-500 leading-relaxed">Certified for 24/7 continuous operation with 99.9% uptime guarantee. Components sourced from top global vendors.</p>
+                   <h4 className="font-bold text-sm text-gray-900 mb-1">ISO 9001:2015 Quality Tested</h4>
+                   <p className="text-xs text-gray-500 leading-relaxed">Every machine undergoes a 48-hour continuous test run before dispatch. Built with L&amp;T / DELTA drives, Crompton or Bonfiglioli motors, and Festo / SMC / Camozzi pneumatics.</p>
                 </div>
              </div>
           </div>
