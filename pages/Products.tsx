@@ -150,7 +150,7 @@ export const Products: React.FC<ProductsProps> = ({ onNavigate }) => {
                   <div className="bg-blue-600 rounded-full p-1">
                     <CheckCircle size={14} className="text-white" strokeWidth={3} />
                   </div>
-                  <span className="text-xs font-bold tracking-[0.2em] uppercase text-white">Made in Faridabad</span>
+                  <span className="text-xs font-bold tracking-[0.2em] uppercase text-white">Made in India</span>
                 </div>
               </div>
             </div>
